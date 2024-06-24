@@ -1,5 +1,12 @@
 # Skeletyl
 
+ZMK shield config for flexiable PCB version of Skeletyl keyboard.
+
+## Components ##
+- https://github.com/Bastardkb/Skeletyl-PCB-plate
+- https://github.com/Bastardkb/TBK-Mini-PCB-thumb-cluster
+- https://github.com/Bastardkb/Elite-C-holder
+
 ## Usage
 
 #### `config/west.yml`
