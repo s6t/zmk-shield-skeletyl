@@ -25,7 +25,6 @@ manifest:
     - name: zmk-shield-skeletyl
       remote: s6t
       revision: main
-      path: config/boards/shields/skeletyl
   self:
     path: config
 ```
