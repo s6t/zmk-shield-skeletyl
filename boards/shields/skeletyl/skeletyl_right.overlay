@@ -4,12 +4,28 @@
     col-offset = <5>;
 };
 
-&default_kscan {
-    col-gpios
-        = <&pro_micro  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col5
-        , <&pro_micro  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col6
-        , <&pro_micro  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col7
-        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col8
-        , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col9
-        ;
+/ {
+    chosen {
+        zmk,kscan = &default_kscan;
+    };
+
+    default_kscan: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
+
+        diode-direction = "row2col";
+        row-gpios
+            = <&pro_micro 18 (GPIO_ACTIVE_HIGH)> // row0
+            , <&pro_micro  5 (GPIO_ACTIVE_HIGH)> // row1
+            , <&pro_micro  4 (GPIO_ACTIVE_HIGH)> // row2
+            , <&pro_micro  9 (GPIO_ACTIVE_HIGH)> // row3
+            ;
+        col-gpios
+            = <&pro_micro  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col5
+            , <&pro_micro  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col6
+            , <&pro_micro  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col7
+            , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col8
+            , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col9
+            ;
+    };
 };

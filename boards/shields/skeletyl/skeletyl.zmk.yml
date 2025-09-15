@@ -11,5 +11,6 @@ features:
   - underglow
   - studio
 siblings:
+  - skeletyl_dongle
   - skeletyl_left
   - skeletyl_right
