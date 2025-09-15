@@ -9,6 +9,7 @@ features:
   - keys
   - display
   - underglow
+  - studio
 siblings:
   - skeletyl_left
   - skeletyl_right
